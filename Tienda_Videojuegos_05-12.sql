@@ -3,13 +3,13 @@ CREATE TABLE BOLETA (
   Id_Boleta int, 
   Nombre_Vendedor VARCHAR(30),
   Nombre_Comprador VARCHAR(30),
-  Precio_Total int,
+  Precio_Total int NOT NULL,
   Fecha_Compra DATE,
   PRIMARY key (Id_Boleta) );
 CREATE TABLE CARRO_COMPRA (
   Id_Carro int,
   Fecha_Creacion_Carro DATE,
-  Estado_Carro int,
+  Estado_Carro int NOT NULL,
   Id_usuario int,
   Id_videojuego int,
   PRIMARY key (Id_Carro),
@@ -91,7 +91,7 @@ CREATE TABLE VIDEOJUEGO (
   Fecha_Lanzamiento_Videojuego DATE,
   Id_Categoria int,
   PRIMARY KEY (Id_Videojuego),
-  FOREIGN KEY (Id_Categoria) REFERENCES CATEGORIA_VIDEOJUEGO(id_categoria) );
+  FOREIGN KEY (Id_Categoria) REFERENCES CATEGORIA(id_categoria) );
 CREATE TABLE VIDEOJUEGO_EN_TIENDA ( 
   Id_videojuego_en_tienda int,
   Id_tienda int,
