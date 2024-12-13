@@ -1,4 +1,5 @@
--- TABLE
+--Tablas:
+
 CREATE TABLE BOLETA (
   Id_Boleta int, 
   Nombre_Vendedor VARCHAR(30),
@@ -159,8 +160,8 @@ CREATE TABLE COMPRA (
   FOREIGN KEY (Id_Carro) REFERENCES CARRO_COMPRA(Id_Carro)
 );
 
--- Validaciones de tipos de datos y restricciones adicionales
+
+-- Validaciones de tipos de datos y restricciones adicionales:
+
 ALTER TABLE USUARIO ADD CONSTRAINT chk_rol CHECK (Rol IN ('Admin', 'Cliente', 'Vendedor'));
 ALTER TABLE CARRO_COMPRA ADD CONSTRAINT chk_estado CHECK (Estado_Carro IN (0, 1));
-
- 
