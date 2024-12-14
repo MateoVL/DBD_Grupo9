@@ -104,7 +104,32 @@ INSERT INTO CATEGORIA_VIDEOJUEGO (Id_Categoria, Id_Videojuego) VALUES
 (2, 1),
 (3, 3),
 (4, 4),
-(5, 5);
+(5, 5),
+(6, 12),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 11),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 9),
+(15, 1),
+(16, 6),
+(17, 14),
+(18, 6),
+(19, 9),
+(20, 15),
+(21, 15),
+(22, 6),
+(23, 6),
+(24, 7),
+(25, 14),
+(26, 14),
+(27, 13),
+(28, 13),
+(29, 13);
+
 
 -- Datos para la tabla LISTA_DESEOS
 INSERT INTO LISTA_DESEOS (Id_lista_deseos, Id_usuario_lista) VALUES
