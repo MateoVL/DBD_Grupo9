@@ -60,12 +60,6 @@ CREATE TABLE if not EXISTS CATEGORIA_VIDEOJUEGO (
   FOREIGN KEY (Id_Categoria) REFERENCES CATEGORIA(id_categoria),
   FOREIGN KEY (Id_Videojuego) references VIDEOJUEGO(id_videojuego) );
 
-CREATE TABLE if not EXISTS COMPRA (
-  Id_Compra int,
-  Subtotal int,
-  Metodo_Pago VARCHAR(20),
-  PRIMARY key (Id_Compra) );
-
 CREATE TABLE if not EXISTS LISTA_DESEOS ( 
   Id_lista_deseos int,
   Id_usuario_lista int,
