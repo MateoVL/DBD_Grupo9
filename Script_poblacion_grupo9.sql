@@ -284,3 +284,21 @@ INSERT INTO COMPRA (Id_Compra, Subtotal, Metodo_Pago, Id_Carro) VALUES
 (6, 75000, 'Criptomoneda', 6),
 (7, 90000, 'Tarjeta de Crédito', 7);
 
+
+-- Datos para la tabla CARRO_VIDEOJUEGO
+INSERT INTO CARRO_VIDEOJUEGO (Id_Carro, Id_Videojuego, Cantidad) VALUES
+(1, 1, 2), -- Carro 1 con 2 copias de Minecraft
+(1, 2, 1), -- Carro 1 con 1 copia de GTA V
+(2, 3, 3), -- Carro 2 con 3 copias de FIFA 23
+(2, 4, 1), -- Carro 2 con 1 copia de Civilization VI
+(3, 5, 2), -- Carro 3 con 2 copias de The Witcher 3
+(3, 6, 5), -- Carro 3 con 5 copias de Fortnite
+(4, 7, 4), -- Carro 4 con 4 copias de Among Us
+(4, 8, 1), -- Carro 4 con 1 copia de Red Dead Redemption 2
+(5, 9, 3), -- Carro 5 con 3 copias de League of Legends
+(5, 10, 2), -- Carro 5 con 2 copias de Zelda: Breath of the Wild
+(6, 11, 1), -- Carro 6 con 1 copia de Super Mario Odyssey
+(6, 12, 2), -- Carro 6 con 2 copias de Animal Crossing
+(7, 13, 1), -- Carro 7 con 1 copia de Cyberpunk 2077
+(7, 14, 3), -- Carro 7 con 3 copias de Hades
+(7, 15, 2); -- Carro 7 con 2 copias de Valorant
