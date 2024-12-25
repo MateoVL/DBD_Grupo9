@@ -1,15 +1,19 @@
 --1. Agregar un producto al carrito de compras.
 
 --2. Eliminar un producto del carrito de compras.
-DELETE FROM CARRO_VIDEOJUEGO WHERE id_videojuego IN (SELECT nombre_videojuego
-                                                     FROM VIDEOJUEGO
-                                                     where nombre_videojuego = <introducir nombr de videojuego>
-                                                    );--
+DELETE FROM CARRO_VIDEOJUEGO 
+WHERE id_videojuego IN (SELECT nombre_videojuego
+                        FROM VIDEOJUEGO
+                        WHERE nombre_videojuego = <introducir nombr de videojuego>
+                       )
+AND Id_Carro = <id del carro>;
 /*Ejemplo*/
-DELETE FROM CARRO_VIDEOJUEGO WHERE Id_Videojuego IN (SELECT id_videojuego
-                                                     FROM VIDEOJUEGO
-                                                     where nombre_videojuego = 'FIFA 23'
-                                                    );--Elimina el id de FIFA 23 en el carro
+DELETE FROM CARRO_VIDEOJUEGO 
+WHERE Id_Videojuego IN (SELECT id_videojuego
+                        FROM VIDEOJUEGO
+                        WHERE nombre_videojuego = 'FIFA 23'
+                       )
+AND Id_Carro = 2 ;
 
 --3. Mostrar los productos del carrito de compras.
 SELECT V.Nombre_Videojuego, V.Precio_Videojuego, CV.Cantidad, (V.Precio_Videojuego * CV.Cantidad) AS Subtotal
