@@ -2,7 +2,7 @@
 
 --2. Eliminar un producto del carrito de compras.
 DELETE FROM CARRO_VIDEOJUEGO 
-WHERE id_videojuego IN (SELECT nombre_videojuego
+WHERE id_videojuego IN (SELECT id_videojuego
                         FROM VIDEOJUEGO
                         WHERE nombre_videojuego = <introducir nombr de videojuego>
                        )
