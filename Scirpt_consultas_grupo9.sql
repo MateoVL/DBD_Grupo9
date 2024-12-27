@@ -12,7 +12,7 @@ WHERE V.Nombre_Videojuego = 'nombre del video juego';
 /*ejemplo*/
 INSERT INTO CARRO_VIDEOJUEGO (Id_Carro, Id_Videojuego, Cantidad)
 SELECT 
-    1,
+    4,
     V.Id_Videojuego,
     12
 FROM VIDEOJUEGO V
