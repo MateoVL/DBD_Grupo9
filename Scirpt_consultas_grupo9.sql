@@ -35,6 +35,7 @@ WHERE id_videojuego IN (SELECT id_videojuego
                         WHERE nombre_videojuego = <introducir nombr de videojuego>
                        )
 AND Id_Carro = <id del carro>;
+AND Cantidad = 0;
 /*Ejemplo*/
 UPDATE CARRO_VIDEOJUEGO
 SET Cantidad = Cantidad - 1
@@ -51,7 +52,8 @@ WHERE Id_Videojuego IN (SELECT id_videojuego
                         FROM VIDEOJUEGO
                         WHERE nombre_videojuego = 'FIFA 23'
                        )
-AND Id_Carro = 2 ;
+AND Id_Carro = 2 
+AND Cantidad  = 0;
 
 --3. Mostrar los productos del carrito de compras.
 SELECT V.Nombre_Videojuego, V.Precio_Videojuego, CV.Cantidad, (V.Precio_Videojuego * CV.Cantidad) AS Subtotal
