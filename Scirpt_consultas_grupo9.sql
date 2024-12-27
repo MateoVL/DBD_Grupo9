@@ -1,6 +1,16 @@
 --1. Agregar un producto al carrito de compras.
 
 --2. Eliminar un producto del carrito de compras.
+UPDATE CARRO_VIDEOJUEGO
+SET Cantidad = Cantidad - 1
+WHERE Id_Videojuego = (
+    SELECT Id_Videojuego
+    FROM VIDEOJUEGO
+    WHERE Nombre_Videojuego = <nombre videojuego>
+)
+AND Id_Carro = <id carro>
+AND Cantidad > 0;
+
 DELETE FROM CARRO_VIDEOJUEGO 
 WHERE id_videojuego IN (SELECT id_videojuego
                         FROM VIDEOJUEGO
@@ -8,6 +18,16 @@ WHERE id_videojuego IN (SELECT id_videojuego
                        )
 AND Id_Carro = <id del carro>;
 /*Ejemplo*/
+UPDATE CARRO_VIDEOJUEGO
+SET Cantidad = Cantidad - 1
+WHERE Id_Videojuego = (
+    SELECT Id_Videojuego
+    FROM VIDEOJUEGO
+    WHERE Nombre_Videojuego = 'FIFA 23'
+)
+AND Id_Carro = 2
+AND Cantidad > 0;
+
 DELETE FROM CARRO_VIDEOJUEGO 
 WHERE Id_Videojuego IN (SELECT id_videojuego
                         FROM VIDEOJUEGO
