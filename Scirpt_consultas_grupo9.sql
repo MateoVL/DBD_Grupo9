@@ -1,4 +1,22 @@
 --1. Agregar un producto al carrito de compras.
+INSERT INTO CARRO_VIDEOJUEGO (Id_Carro, Id_Videojuego, Cantidad)
+SELECT 
+    Id_carro,
+    V.Id_Videojuego,
+    Cantidad
+FROM VIDEOJUEGO V
+WHERE V.Nombre_Videojuego = 'nombre del video juego';
+
+
+
+/*ejemplo*/
+INSERT INTO CARRO_VIDEOJUEGO (Id_Carro, Id_Videojuego, Cantidad)
+SELECT 
+    1,
+    V.Id_Videojuego,
+    12
+FROM VIDEOJUEGO V
+WHERE V.Nombre_Videojuego = 'FIFA 23';
 
 --2. Eliminar un producto del carrito de compras.
 UPDATE CARRO_VIDEOJUEGO
