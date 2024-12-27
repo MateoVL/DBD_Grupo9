@@ -44,7 +44,7 @@ CREATE TABLE if not EXISTS BOLETA (
 CREATE TABLE if not EXISTS CARRO_COMPRA (
   Id_Carro int,
   Fecha_Creacion_Carro DATE,
-  Estado_Carro int NOT NULL,
+  Estado_Carro int NOT NULL check (Estado_carro in (0.1)),
   Id_usuario int,
   Id_videojuego int,
   PRIMARY key (Id_Carro),
@@ -157,8 +157,7 @@ CREATE TABLE if not EXISTS COMPRA (
 );
 
 
--- Asegurar que nombre_Rol sea único para usarlo como clave foránea
-ALTER TABLE ROL ADD CONSTRAINT uq_nombre_rol UNIQUE (nombre_Rol);
 
--- Si quieres validar el estado del carro, esta restricción tiene sentido:
-ALTER TABLE CARRO_COMPRA ADD CONSTRAINT chk_estado CHECK (Estado_Carro IN (0, 1));
+
+
+
