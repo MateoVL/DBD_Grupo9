@@ -20,8 +20,9 @@ public class VideojuegoRepositoryImp implements VideojuegoRepository {
 
     @Override
     public List<Videojuego> getAll(){
-        try (Connection conn = sql2o.open()){
-            return conn.createQuery("SELECT * FROM videojuego").executeAndFetch(Videojuego.class);
+        String sql = "SELECT * FROM videojuego";
+        try (Connection con = sql2o.open()){
+            return con.createQuery(sql).executeAndFetch(Videojuego.class);
         } catch (Exception e){
             System.out.println(e.getMessage());
             return null;

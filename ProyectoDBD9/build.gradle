@@ -19,10 +19,12 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'org.postgresql:postgresql'
+	implementation 'org.sql2o:sql2o:1.6.0'  // Dependencia para SQL2o
+	implementation 'org.postgresql:postgresql:42.5.0'  // Controlador JDBC para PostgreSQL
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation 'org.sql2o:sql2o:1.6.0'
-	implementation 'org.postgresql:postgresql:42.5.1'
 }
 
+test {
+	useJUnitPlatform()
+}
