@@ -3,7 +3,6 @@ package com.example.ProyectoDBD9.models;
 import java.util.Date;
 
 public class Videojuego {
-
     private int id_videojuego;
     private String nombre_videojuego;
     private String url_videojuego;
@@ -13,8 +12,8 @@ public class Videojuego {
     private Date fecha_lanzamiento_videojuego;
     private int id_categoria;
 
-    public Videojuego(){};
-
+    //Constructores
+    public Videojuego() {}
     public Videojuego(int id_videojuego, String nombre_videojuego, String url_videojuego, String descripcion_videojuego, int precio_videojuego, int num_ventas_videojuego, Date fecha_lanzamiento_videojuego, int id_categoria) {
         this.id_videojuego = id_videojuego;
         this.nombre_videojuego = nombre_videojuego;
@@ -26,10 +25,8 @@ public class Videojuego {
         this.id_categoria = id_categoria;
     }
 
-    public int getId_videojuego() {
-        return id_videojuego;
-    }
-
+    //Getters
+    public int getId_videojuego() { return id_videojuego; }
     public String getNombre_videojuego() {
         return nombre_videojuego;
     }
@@ -52,6 +49,12 @@ public class Videojuego {
         return id_categoria;
     }
 
+    //Setters
+    public void setPrecio_videojuego(int precio_videojuego) {this.precio_videojuego = precio_videojuego;}
+
+
+
+    //Otros
     public void setAddNumVentas(int num_ventas_videojuego) {
         this.num_ventas_videojuego = num_ventas_videojuego + 1;
     }
