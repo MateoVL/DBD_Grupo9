@@ -46,11 +46,8 @@ CREATE TABLE if not EXISTS CARRO_COMPRA (
   Fecha_Creacion_Carro DATE,
   Estado_Carro int NOT NULL check (Estado_carro in (0,1)),
   Id_usuario int,
-  Id_videojuego int,
   PRIMARY key (Id_Carro),
-  FOREIGN key (Id_usuario) references USUARIO(id_usuario),
-  FOREIGN key (Id_videojuego) references VIDEOJUEGO(id_videojuego) );
-
+  FOREIGN key (Id_usuario) references USUARIO(id_usuario));
 
 
 CREATE TABLE if not EXISTS CATEGORIA_VIDEOJUEGO (

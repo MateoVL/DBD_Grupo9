@@ -88,14 +88,14 @@ INSERT INTO BOLETA (Id_Boleta, Nombre_Vendedor, Nombre_Comprador, Precio_Total, 
 (7, 'ChicoTrujillo', 'Martin69gamer', 90000, '2024-12-01');
 
 -- Datos para la tabla CARRO_COMPRA
-INSERT INTO CARRO_COMPRA (Id_Carro, Fecha_Creacion_Carro, Estado_Carro, Id_usuario, Id_videojuego) VALUES
-(1, '2024-06-01', 1, 2, 1),
-(2, '2024-07-05', 0, 4, 3),
-(3, '2024-08-10', 1, 6, 5),
-(4, '2024-09-15', 0, 8, 7),
-(5, '2024-10-20', 1, 10, 9),
-(6, '2024-11-25', 0, 12, 11),
-(7, '2024-12-30', 1, 14, 13);
+INSERT INTO CARRO_COMPRA (Id_Carro, Fecha_Creacion_Carro, Estado_Carro, Id_usuario) VALUES
+(1, '2024-06-01', 1, 2),
+(2, '2024-07-05', 0, 4),
+(3, '2024-08-10', 1, 6),
+(4, '2024-09-15', 0, 8),
+(5, '2024-10-20', 1, 10),
+(6, '2024-11-25', 0, 12),
+(7, '2024-12-30', 1, 14);
 
 
 -- Datos para la tabla CATEGORIA_VIDEOJUEGO
