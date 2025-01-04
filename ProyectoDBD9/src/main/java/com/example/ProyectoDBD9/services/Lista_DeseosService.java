@@ -3,9 +3,12 @@ package com.example.ProyectoDBD9.services;
 import com.example.ProyectoDBD9.models.Lista_Deseos;
 import com.example.ProyectoDBD9.repositories.Lista_DeseosRepositoryImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Lista_DeseosService {
     private final Lista_DeseosRepositoryImp lista_DeseosRepositoryImp;
 
