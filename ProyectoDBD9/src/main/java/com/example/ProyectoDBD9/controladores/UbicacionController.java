@@ -10,10 +10,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/ubicacion")
 public class UbicacionController {
-    private final Ubicaccion ubicacion ;
+    private final UbicacionService ubicacionService ;
 
     @Autowired
-    public UbicacionController(Ubicacion ubicacion) {
+    public UbicacionController(UbicacionService ubicacionService) {
         this.ubicacionService = ubicacionService;
     }
 
@@ -21,7 +21,9 @@ public class UbicacionController {
     public String crear(@RequestBody Ubicacion ubicacion) {
         if(ubicacionService.crear(ubicacion)){
             return "Ubicación creada correctamente";
-        } else return "Error al crear la Ubicacion";
+        } else {
+            return "Error al crear la Ubicacion";
+        }
     }
 
     @GetMapping("/get")
@@ -33,8 +35,9 @@ public class UbicacionController {
     public void update(@RequestBody Ubicacion ubicacion) {
         ubicacionService.update(ubicacion);
     }
+
     @DeleteMapping("/delete/{Id_Ubicacion}")
     public void delete(@PathVariable int Id_Ubicacion) {
-        boletaService.delete(Id_Ubicacion);
+        ubicacionService.delete(Id_Ubicacion);
     }
 }
