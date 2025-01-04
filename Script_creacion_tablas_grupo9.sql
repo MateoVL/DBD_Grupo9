@@ -29,9 +29,7 @@ CREATE TABLE if not EXISTS VIDEOJUEGO (
   Precio_Videojuego int NOT NULL,
   Num_Ventas_Videojuego int,
   Fecha_Lanzamiento_Videojuego DATE,
-  Id_Categoria int,
-  PRIMARY KEY (Id_Videojuego),
-  FOREIGN KEY (Id_Categoria) REFERENCES CATEGORIA(id_categoria) );
+  PRIMARY KEY (Id_Videojuego));
 
 CREATE TABLE if not EXISTS BOLETA (
   Id_Boleta int, 

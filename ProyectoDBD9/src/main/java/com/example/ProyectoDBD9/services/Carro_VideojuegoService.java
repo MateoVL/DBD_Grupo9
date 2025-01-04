@@ -29,5 +29,5 @@ public class Carro_VideojuegoService {
         carro_VideojuegoRepositoryImp.update(carro_Videojuego);
     }
 
-    public void delete(int id_carro) {carro_VideojuegoRepositoryImp.delete(id_carro);}
+    public void delete(int id_carro, int id_videojuego) {carro_VideojuegoRepositoryImp.delete(id_carro, id_videojuego);}
 }

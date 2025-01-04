@@ -21,7 +21,7 @@ public class VideojuegoRepositoryImp implements VideojuegoRepository {
 
     @Override
     public void crear(Videojuego videojuego) {
-        String sql = "INSERT INTO videojuego (id_videojuego, nombre_videojuego, url_videojuego, descripcion_videojuego, precio_videojuego, num_ventas_videojuego, fecha_lanzamiento_videojuego, id_categoria) VALUES (:id_videojuego, :nombre_videojuego, :url_videojuego, :descripcion_videojuego, :precio_videojuego, :num_ventas_videojuego, :fecha_lanzamiento_videojuego, :id_categoria)";
+        String sql = "INSERT INTO videojuego (id_videojuego, nombre_videojuego, url_videojuego, descripcion_videojuego, precio_videojuego, num_ventas_videojuego, fecha_lanzamiento_videojuego) VALUES (:id_videojuego, :nombre_videojuego, :url_videojuego, :descripcion_videojuego, :precio_videojuego, :num_ventas_videojuego, :fecha_lanzamiento_videojuego)";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id_videojuego", videojuego.getId_videojuego())
@@ -31,7 +31,6 @@ public class VideojuegoRepositoryImp implements VideojuegoRepository {
                     .addParameter("precio_videojuego",videojuego.getPrecio_videojuego())
                     .addParameter("num_ventas_videojuego",videojuego.getNum_ventas_videojuego())
                     .addParameter("fecha_lanzamiento_videojuego",videojuego.getFecha_lanzamiento_videojuego())
-                    .addParameter("id_categoria",videojuego.getId_categoria())
                     .executeUpdate();
         }
     }
@@ -46,7 +45,7 @@ public class VideojuegoRepositoryImp implements VideojuegoRepository {
 
     @Override
     public void update(Videojuego videojuego) {
-        String sql = "UPDATE videojuego SET nombre_videojuego = :nombre_videojuego, url_videojuego=:url_videojuego, descripcion_videojuego=:descripcion_videojuego, precio_videojuego=:precio_videojuego, num_ventas_videojuego=:num_ventas_videojuego, fecha_lanzamiento_videojuego=:fecha_lanzamiento_videojuego, id_categoria=:id_categoria WHERE id_videojuego = :id_videojuego";
+        String sql = "UPDATE videojuego SET nombre_videojuego = :nombre_videojuego, url_videojuego=:url_videojuego, descripcion_videojuego=:descripcion_videojuego, precio_videojuego=:precio_videojuego, num_ventas_videojuego=:num_ventas_videojuego, fecha_lanzamiento_videojuego=:fecha_lanzamiento_videojuego WHERE id_videojuego = :id_videojuego";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id_videojuego", videojuego.getId_videojuego())
@@ -56,7 +55,6 @@ public class VideojuegoRepositoryImp implements VideojuegoRepository {
                     .addParameter("precio_videojuego",videojuego.getPrecio_videojuego())
                     .addParameter("num_ventas_videojuego",videojuego.getNum_ventas_videojuego())
                     .addParameter("fecha_lanzamiento_videojuego",videojuego.getFecha_lanzamiento_videojuego())
-                    .addParameter("id_categoria",videojuego.getId_categoria())
                     .executeUpdate();
         }
     }

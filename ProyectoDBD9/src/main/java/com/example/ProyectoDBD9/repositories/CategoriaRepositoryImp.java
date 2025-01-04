@@ -50,7 +50,7 @@ public class CategoriaRepositoryImp implements CategoriaRepository {
 
     @Override
     public void delete(int id_categoria) {
-        String sql = "DELETE FROM categoria WHERE id_categoria = :id_categoria";
+        String sql = "DELETE FROM categoria AS c, categoria_videojuego AS cv WHERE c.id_categoria = :id_categoria and cv.id_categoria = :id_categoria";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id_categoria", id_categoria)

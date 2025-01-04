@@ -39,7 +39,7 @@ public class Carro_VideojuegoRepositoryImp implements Carro_VideojuegoRepository
 
     @Override
     public void update(Carro_Videojuego carro_Videojuego) {
-        String sql = "UPDATE carro_videojuego SET id_videojuego = :id_videojuego,  cantidad=:cantidad WHERE id_carro = :id_carro";
+        String sql = "UPDATE carro_videojuego SET cantidad=:cantidad WHERE id_carro = :id_carro AND id_videojuego=:id_videojuego";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id_carro", carro_Videojuego.getId_carro())
@@ -50,11 +50,12 @@ public class Carro_VideojuegoRepositoryImp implements Carro_VideojuegoRepository
     }
 
     @Override
-    public void delete(int id_carro) {
-        String sql = "DELETE FROM carro_videojuego WHERE id_carro = :id_carro";
+    public void delete(int id_carro, int id_videojuego) {
+        String sql = "DELETE FROM carro_videojuego WHERE id_carro = :id_carro AND id_videojuego = :id_videojuego";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id_carro", id_carro)
+                    .addParameter("id_videojuego", id_videojuego)
                     .executeUpdate();
         }
     }

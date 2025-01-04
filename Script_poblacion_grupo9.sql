@@ -59,22 +59,22 @@ INSERT INTO CATEGORIA (Id_Categoria, Nombre_Categoria) VALUES
 
 
 -- Datos para la tabla VIDEOJUEGO
-INSERT INTO VIDEOJUEGO (Id_Videojuego, Nombre_Videojuego, Url_Videojuego, Descripcion_Videojuego, Precio_Videojuego, Num_Ventas_Videojuego, Fecha_Lanzamiento_Videojuego, Id_Categoria) VALUES
-(1, 'Minecraft', 'https://minecraft.net', 'Un juego de construcción y aventuras.', 20000, 5000000, '2009-05-17', 2),
-(2, 'GTA V', 'https://rockstargames.com/gta-v', 'Juego de mundo abierto y acción.', 30000, 10000000, '2013-09-17', 1),
-(3, 'FIFA 23', 'https://ea.com/fifa', 'El mejor simulador de fútbol.', 50000, 2000000, '2022-09-30', 3),
-(4, 'Civilization VI', 'https://civilization.com', 'Estrategia por turnos.', 25000, 1000000, '2016-10-21', 4),
-(5, 'The Witcher 3', 'https://thewitcher.com', 'Juego de rol épico.', 40000, 3000000, '2015-05-19', 5),
-(6, 'Fortnite', 'https://fortnite.com', 'Battle Royale y construcción.', 0, 35000000, '2017-07-25', 18),
-(7, 'Among Us', 'https://innersloth.com/gameAmongUs.php', 'Juego de deducción social.', 5000, 15000000, '2018-06-15', 24),
-(8, 'Red Dead Redemption 2', 'https://rockstargames.com/reddeadredemption2', 'Aventura en el viejo oeste.', 60000, 25000000, '2018-10-26', 2),
-(9, 'League of Legends', 'https://leagueoflegends.com', 'MOBA competitivo.', 0, 101000000, '2009-10-27', 19),
-(10, 'The Legend of Zelda: Breath of the Wild', 'https://zelda.com/breath-of-the-wild', 'Aventura y exploración.', 50000, 25000000, '2017-03-03', 2),
-(11, 'Super Mario Odyssey', 'https://mario.nintendo.com', 'Plataformas y aventuras.', 50000, 20000000, '2017-10-27', 10),
-(12, 'Animal Crossing: New Horizons', 'https://animal-crossing.com', 'Simulación de vida.', 50000, 30000000, '2020-03-20', 6),
-(13, 'Cyberpunk 2077', 'https://cyberpunk.net', 'RPG futurista.', 60000, 13000000, '2020-12-10', 5),
-(14, 'Hades', 'https://supergiantgames.com/games/hades', 'Roguelike de acción.', 25000, 2000000, '2020-09-17', 25),
-(15, 'Valorant', 'https://playvalorant.com', 'Shooter táctico en primera persona.', 0, 14000000, '2020-06-02', 20);
+INSERT INTO VIDEOJUEGO (Id_Videojuego, Nombre_Videojuego, Url_Videojuego, Descripcion_Videojuego, Precio_Videojuego, Num_Ventas_Videojuego, Fecha_Lanzamiento_Videojuego) VALUES
+(1, 'Minecraft', 'https://minecraft.net', 'Un juego de construcción y aventuras.', 20000, 5000000, '2009-05-17'),
+(2, 'GTA V', 'https://rockstargames.com/gta-v', 'Juego de mundo abierto y acción.', 30000, 10000000, '2013-09-17'),
+(3, 'FIFA 23', 'https://ea.com/fifa', 'El mejor simulador de fútbol.', 50000, 2000000, '2022-09-30'),
+(4, 'Civilization VI', 'https://civilization.com', 'Estrategia por turnos.', 25000, 1000000, '2016-10-21'),
+(5, 'The Witcher 3', 'https://thewitcher.com', 'Juego de rol épico.', 40000, 3000000, '2015-05-19'),
+(6, 'Fortnite', 'https://fortnite.com', 'Battle Royale y construcción.', 0, 35000000, '2017-07-25'),
+(7, 'Among Us', 'https://innersloth.com/gameAmongUs.php', 'Juego de deducción social.', 5000, 15000000, '2018-06-15'),
+(8, 'Red Dead Redemption 2', 'https://rockstargames.com/reddeadredemption2', 'Aventura en el viejo oeste.', 60000, 25000000, '2018-10-26'),
+(9, 'League of Legends', 'https://leagueoflegends.com', 'MOBA competitivo.', 0, 101000000, '2009-10-27'),
+(10, 'The Legend of Zelda: Breath of the Wild', 'https://zelda.com/breath-of-the-wild', 'Aventura y exploración.', 50000, 25000000, '2017-03-03'),
+(11, 'Super Mario Odyssey', 'https://mario.nintendo.com', 'Plataformas y aventuras.', 50000, 20000000, '2017-10-27'),
+(12, 'Animal Crossing: New Horizons', 'https://animal-crossing.com', 'Simulación de vida.', 50000, 30000000, '2020-03-20'),
+(13, 'Cyberpunk 2077', 'https://cyberpunk.net', 'RPG futurista.', 60000, 13000000, '2020-12-10'),
+(14, 'Hades', 'https://supergiantgames.com/games/hades', 'Roguelike de acción.', 25000, 2000000, '2020-09-17'),
+(15, 'Valorant', 'https://playvalorant.com', 'Shooter táctico en primera persona.', 0, 14000000, '2020-06-02');
 
 
 -- Datos para la tabla BOLETA

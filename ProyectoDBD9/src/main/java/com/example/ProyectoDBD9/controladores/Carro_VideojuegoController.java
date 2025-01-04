@@ -18,10 +18,8 @@ public class Carro_VideojuegoController {
     }
 
     @PostMapping("/crear")
-    public String crear(@RequestBody Carro_Videojuego carro_Videojuego) {
-        if(carro_VideojuegoService.crear(carro_Videojuego)){
-            return "Boleta creada correctamente";
-        } else return "Error al crear la boleta";
+    public void crear(@RequestBody Carro_Videojuego carro_Videojuego) {
+        carro_VideojuegoService.crear(carro_Videojuego);
     }
 
     @GetMapping("/get")
@@ -34,8 +32,8 @@ public class Carro_VideojuegoController {
         carro_VideojuegoService.update(carro_Videojuego);
     }
 
-    @DeleteMapping("/delete/{id_carro}")
-    public void delete(@PathVariable int id_carro) {
-        carro_VideojuegoService.delete(id_carro);
+    @DeleteMapping("/delete/{id_carro}/{id_videojuego}")
+    public void delete(@PathVariable int id_carro, @PathVariable int id_videojuego) {
+        carro_VideojuegoService.delete(id_carro, id_videojuego);
     }
 }
