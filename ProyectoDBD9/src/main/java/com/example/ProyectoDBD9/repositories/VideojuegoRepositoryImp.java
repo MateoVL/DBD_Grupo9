@@ -11,7 +11,6 @@ import java.util.List;
 
 @Repository
 public class VideojuegoRepositoryImp implements VideojuegoRepository {
-
     private final Sql2o sql2o;
 
     @Autowired
@@ -68,5 +67,4 @@ public class VideojuegoRepositoryImp implements VideojuegoRepository {
                     .executeUpdate();
         }
     }
-
 }
